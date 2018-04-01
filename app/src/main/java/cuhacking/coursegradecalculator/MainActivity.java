@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
 
         // Esablishing a link to the average label
         averageLabel = findViewById(R.id.averageLabel);
-
     }
 
     //----------------------------------------------------------------------------------------------
@@ -58,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
     // A method that updates the grade
     private void updateAverage()
     {
-        String temp = "Average Grade: " + currentSemester.getAvg() + "%";
+        String temp = String.format("Average Grade: %.02f", currentSemester.getAvg()) + "%";
 
         if (temp.equals("Average Grade: NaN%"))
             temp = "Average Grade: ___";
