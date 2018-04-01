@@ -49,7 +49,7 @@ public class CourseInformation extends AppCompatActivity {
     // A method that updates the grade
     private void updateGrade()
     {
-        String temp = "Course Grade: " + courseInfo.getCurrentCourseGrade() + "%";
+        String temp = String.format("Average Grade: %.02f", courseInfo.getCurrentCourseGrade()) + "%";
 
         if (temp.equals("Course Grade: NaN%"))
             temp = "Course Grade: ___";
